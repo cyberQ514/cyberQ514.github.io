@@ -337,6 +337,9 @@
   .proj li::before{content:"›";position:absolute;left:2px;color:var(--green);opacity:.7}
   .proj .stack{margin-top:auto;padding-top:6px;font-size:.7rem;color:var(--dim-2)}
   .proj .stack::before{content:"# ";color:var(--green);opacity:.6}
+  .proj-top .repo{margin-left:auto;font-size:.7rem;color:var(--green);text-decoration:none;white-space:nowrap;border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
+  .proj-top .repo:hover{color:var(--text);border-bottom-color:var(--green-line)}
+  .editing .proj-top{padding-right:26px}
 
   /* ============ 文章 ============ */
   .posts{display:grid;gap:0;max-width:1020px}
@@ -735,7 +738,7 @@
         </div>
       </div>
 
-      <div class="empty" id="skills-empty">
+      <div class="empty" id="skills-empty" hidden>
         <p class="empty-k">// skills/ 还没填</p>
         <p class="empty-d">技能会列在这里。</p>
       </div>
@@ -753,7 +756,7 @@
       <div class="projs" id="proj-list">
         <article class="proj">
           <button class="del" type="button" data-del aria-label="删除这个项目">×</button>
-          <div class="proj-top"><span class="when" data-edit data-ph="2026.01">课程作业</span></div>
+          <div class="proj-top"><span class="when" data-edit data-ph="2026.01">课程作业</span><a class="repo" href="https://github.com/cyberQ514/cpp-homework" target="_blank" rel="noopener noreferrer">查看仓库 ↗</a></div>
           <h3 data-edit data-focus data-ph="项目名称">C++ 课程作业合集</h3>
           <p class="path" data-edit data-ph="~/projects/name">~/projects/cpp-homework</p>
           <p data-edit data-ph="一句话说明它解决了什么问题。">程序设计课上的三个控制台小程序：一个判断素数、一个四则运算、一个和电脑对战的取数游戏。</p>
